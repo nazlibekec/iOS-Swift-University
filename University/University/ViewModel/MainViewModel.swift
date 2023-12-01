@@ -8,9 +8,21 @@
 import UIKit
 
 class MainViewModel {
+    var dataResult: [UniversityModel] = []
     
-    func getData(){
-        Service.getData()
+    
+    func getData(completion: @escaping([UniversityModel]?) -> Void){
+        Service.getData{[weak self] result in
+            guard let self = self else{ return}
+            switch result{
+                
+            case .success(let dataResult):
+                self.dataResult = dataResult
+                completion(dataResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func numberofSections() -> Int {
@@ -18,6 +30,6 @@ class MainViewModel {
     }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-        return 10
+        return self.dataResult.count
     }
 }

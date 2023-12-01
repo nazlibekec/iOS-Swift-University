@@ -17,6 +17,8 @@
 		7B6E16262B061180005A82F6 /* ServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E16252B061180005A82F6 /* ServiceConstant.swift */; };
 		7B6E16282B061276005A82F6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E16272B061276005A82F6 /* Service.swift */; };
 		7B6E162B2B0612AB005A82F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B6E162A2B0612AB005A82F6 /* Alamofire */; };
+		7B6E162E2B062551005A82F6 /* UniversityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E162D2B062551005A82F6 /* UniversityModel.swift */; };
+		7B6E16312B06309F005A82F6 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E16302B06309F005A82F6 /* MainViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		7B6E16212B060633005A82F6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7B6E16252B061180005A82F6 /* ServiceConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstant.swift; sourceTree = "<group>"; };
 		7B6E16272B061276005A82F6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7B6E162D2B062551005A82F6 /* UniversityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModel.swift; sourceTree = "<group>"; };
+		7B6E16302B06309F005A82F6 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		7B6E16052B05FE39005A82F6 /* University */ = {
 			isa = PBXGroup;
 			children = (
+				7B6E162F2B06308C005A82F6 /* View */,
+				7B6E162C2B062538005A82F6 /* Model */,
 				7B6E16242B06115B005A82F6 /* Service */,
 				7B6E16202B060614005A82F6 /* ViewModel */,
 				7B6E161B2B05FEDF005A82F6 /* Controller */,
@@ -108,6 +114,22 @@
 				7B6E16272B061276005A82F6 /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7B6E162C2B062538005A82F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B6E162D2B062551005A82F6 /* UniversityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B6E162F2B06308C005A82F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B6E16302B06309F005A82F6 /* MainViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6E16312B06309F005A82F6 /* MainViewCell.swift in Sources */,
 				7B6E16222B060633005A82F6 /* MainViewModel.swift in Sources */,
 				7B6E16282B061276005A82F6 /* Service.swift in Sources */,
 				7B6E161D2B060192005A82F6 /* MainViewController.swift in Sources */,
+				7B6E162E2B062551005A82F6 /* UniversityModel.swift in Sources */,
 				7B6E16072B05FE39005A82F6 /* AppDelegate.swift in Sources */,
 				7B6E16092B05FE39005A82F6 /* SceneDelegate.swift in Sources */,
 				7B6E161F2B0605E1005A82F6 /* MainViewController+TableView.swift in Sources */,

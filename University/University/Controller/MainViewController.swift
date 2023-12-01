@@ -11,6 +11,10 @@ class MainViewController: UITableViewController {
     
     // MARK: - Properties
     var viewModel = MainViewModel()
+    var dataResult :  [UniversityModel] = [] {
+        didSet{ tableView.reloadData()}
+    }
+    
     // MARK: -LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,12 @@ extension MainViewController{
     }
     
     func getData(){
-        viewModel.getData()
+        viewModel.getData {[weak self]result in
+            guard let self = self else{return}
+            guard let resultdata = result else{return}
+            self.dataResult = resultdata
+            
+        }
     }
     
 }
